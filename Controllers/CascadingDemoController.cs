@@ -20,5 +20,14 @@ namespace EpitaExpenseTracker.Controllers
             ViewBag.Countries = CountryStateData.Keys;
             return View();
         }
+
+        public JsonResult GetStates(string country)
+        {
+            if (CountryStateData.TryGetValue(country, out List<string> states))
+            {
+                return Json(states);
+            }
+            return Json(new List<string>());
+        }
     }
 }

@@ -7,6 +7,7 @@ namespace EpitaExpenseTracker.Models.ViewModels
     {
         public Expense Expense { get; set; }
 
+        //public List<SelectListItem> ExpenseCategories = new List<SelectListItem>();
         public List<SelectListItem> ExpenseCategories = new List<SelectListItem>();
 
     }

@@ -11,6 +11,11 @@
     <select id="countries" name="countries" onchange="" class="form-control">
         <option value="">Select a Country</option>
 
+        @foreach (var country in ViewBag.Countries as IEnumerable<string>)
+        {
+            <option value="@country">@country</option>
+        }
+
     </select>
 </div>
 

@@ -1,5 +1,7 @@
-﻿using EpitaExpenseTracker.Models;
+﻿using EpitaExpenseTracker.Helpers;
+using EpitaExpenseTracker.Models.DomainModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EpitaExpenseTracker.Controllers
 {
@@ -37,6 +39,16 @@ namespace EpitaExpenseTracker.Controllers
 
         public IActionResult CreateEditExpense(int? Id)
         {
+            List<SelectListItem> expenseCategories = new List<SelectListItem>();
+
+            foreach (var expense in HelperExpenseCategories.GetAllCategories())
+            {
+                expenseCategories.Add(new SelectListItem() { Value=expense.Id.ToString(), Text=expense.Name });  
+            }
+
+            ViewBag.ExpenseCategories = expenseCategories;
+
+
             if (Id is not null)
             {
                 var item = _context.Expenses.Find(Id);

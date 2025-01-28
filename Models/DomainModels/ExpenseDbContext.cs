@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace EpitaExpenseTracker.Models
+namespace EpitaExpenseTracker.Models.DomainModels
 {
     public class ExpenseDbContext : DbContext
     {
@@ -9,7 +9,7 @@ namespace EpitaExpenseTracker.Models
 
         public ExpenseDbContext(DbContextOptions<ExpenseDbContext> options) : base(options)
         {
-            
+
         }
     }
 }

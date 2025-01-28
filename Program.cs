@@ -1,4 +1,4 @@
-using EpitaExpenseTracker.Models;
+using EpitaExpenseTracker.Models.DomainModels;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

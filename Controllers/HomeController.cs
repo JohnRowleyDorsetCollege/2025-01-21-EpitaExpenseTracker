@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using EpitaExpenseTracker.Models;
+using EpitaExpenseTracker.Models.DomainModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EpitaExpenseTracker.Controllers

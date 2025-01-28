@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Models\DomainModels\NewFolder\" />
     <Folder Include="NewFolder\" />
   </ItemGroup>
 

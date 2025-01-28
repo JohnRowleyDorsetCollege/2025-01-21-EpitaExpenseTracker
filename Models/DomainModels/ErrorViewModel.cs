@@ -1,4 +1,4 @@
-namespace EpitaExpenseTracker.Models
+namespace EpitaExpenseTracker.Models.DomainModels
 {
     public class ErrorViewModel
     {
